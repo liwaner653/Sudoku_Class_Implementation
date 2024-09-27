@@ -2,6 +2,7 @@ from PySide6.QtCore import QAbstractTableModel, QObject, Qt, Property, Signal
 
 from sudoku.sudoku import Sudoku
 
+''' 数独表格数据显示管理 '''
 class SudokuTableModel(QAbstractTableModel):
 
     messageChanged = Signal()
@@ -34,14 +35,15 @@ class SudokuTableModel(QAbstractTableModel):
         if not index.isValid() or role != Qt.DisplayRole:
             return None
 
+        cell_number = self.__sudoku.at(index.row(), index.column())
+
         # Show all hint numbers
-        if self.__show_hint:
+        if self.__show_hint and cell_number == 0:
             inference_numbers = self.__sudoku.getInference(index.row(), index.column())
             return ' '.join(str(number) for number in inference_numbers)
         
         # Show fixed number
-        fixed_number = self.__sudoku.at(index.row(), index.column())
-        return "" if fixed_number == 0 else str(fixed_number)
+        return "" if cell_number == 0 else str(cell_number)
 
     '''
     解析输入字符串
