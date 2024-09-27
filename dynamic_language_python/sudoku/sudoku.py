@@ -69,3 +69,28 @@ class Sudoku(Grid):
                     return False
         
         return True
+
+    '''打印至terminal'''
+    def print(self):
+
+        # 打印横线
+        def printRowLine():
+            print("+" + ("-" * (self._box_size * 2 - 1) + "+") * self._box_size)
+
+        # Table top border
+        printRowLine()
+
+        for r in range(0, self._grid_size):
+            print("|", end='')
+            for c in range(0, self._grid_size, self._box_size):
+                print(' '.join(str(num) for num in self._data[r, c:c+self._box_size]) + "|", end='')
+            print('')
+
+            if not ((r + 1) % self._box_size):
+                printRowLine()
+
+    '''
+    序列化数组
+    '''
+    def serialization(self):
+        return ''.join(str(num) for row_data in self._data for num in row_data)
