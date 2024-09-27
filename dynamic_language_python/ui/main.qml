@@ -10,7 +10,7 @@ Window {
     width: 640
     height: 600
     visible: true
-    title: "hello world"
+    title: "Sudoku"
 
     signal parseSignal(msg: string)
 
