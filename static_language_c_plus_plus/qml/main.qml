@@ -10,7 +10,7 @@ Window {
     width: 640
     height: 600
     visible: true
-    title: "hello world"
+    title: "Sudoku"
 
     signal parseSignal(msg: string)
 
@@ -29,6 +29,7 @@ Window {
             implicitWidth: 50
             implicitHeight: 50
             border.width: 1
+            border.color: "light gray"
 
             Text {
                 anchors.centerIn: parent

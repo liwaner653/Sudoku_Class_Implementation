@@ -29,6 +29,7 @@ Window {
             implicitWidth: 50
             implicitHeight: 50
             border.width: 1
+            border.color: "light gray"
 
             Text {
                 anchors.centerIn: parent
