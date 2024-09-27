@@ -1,5 +1,4 @@
-# Sudoku_Class_Implementation
-作业：实现Sudoku类
+# 作业：实现Sudoku类
 
 按照自己喜好，分别用两种语言，一种静态类型（C++、Java、……），一种动态类型（Python、JavaScript、……），按设计实现Sundoku模块（业务代码、测试代码、文档）。
 
