@@ -19,9 +19,15 @@ dependencies:
   - xz=5.4.6=h8cc25b3_1
   - zlib=1.2.13=h8cc25b3_1
   - pip:
+      - altgraph==0.17.4
       - numpy==2.1.1
+      - packaging==24.1
+      - pefile==2024.8.26
+      - pyinstaller==6.10.0
+      - pyinstaller-hooks-contrib==2024.8
       - pyside6==6.7.2
       - pyside6-addons==6.7.2
       - pyside6-essentials==6.7.2
+      - pywin32-ctypes==0.2.3
       - shiboken6==6.7.2
 prefix: D:\me\miniconda3\envs\soduku
