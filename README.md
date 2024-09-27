@@ -29,15 +29,15 @@ OO基础技术：实现的Sudoku类应当符合所用语言OOP的技术惯例，
 可理解性：恰当的命名、合理的模块（函数）划分、必要的注释
 
 # 成果展示
-
+静态语言选用C++，动态语言选用Python实现
 ## SudokuTerminal.exe
 流程：
 1. 输入字符串 -> 解析输入的字符串。
 2. 若解析失败，给出反馈提示。返回1
 3. 若解析成功，显示九宫格矩阵数据
 4. 序列化解析之后的九宫格矩阵至字符串，与输入字符串作比较，检查解析结果是否与输入字符串一致
-<video src="https://github.com/liwaner653/Sudoku_Class_Implementation/blob/main/videos/sudoku_terminal_exe.mp4"></video>
+![https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/liwaner653/Sudoku_Class_Implementation/blob/main/videos/sudoku_terminal_exe.gif)
 
 ## SudokuUi.exe
 使用Qt框架可视化九宫格，带解析按钮、输入框和提示按钮
-<video src="videos/sudoku_ui_exe.mp4"></video>
+![https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/liwaner653/Sudoku_Class_Implementation/blob/main/videos/sudoku_ui_exe.gif)
