@@ -2,6 +2,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
+#include "sudoku.h"
 #include "sudokutablemodel.h"
 
 int main(int argc, char *argv[])

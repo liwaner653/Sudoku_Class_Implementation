@@ -1,5 +1,9 @@
+#include <iostream>
 #include <set>
 #include "sudoku.h"
+
+using std::cout;
+using std::endl;
 
 Sudoku::Sudoku()
     : Grid(9, 3)
@@ -115,4 +119,50 @@ bool Sudoku::isAValidSudoku() const
 
     // 4. This is a valid sudoku
     return true;
+}
+
+void Sudoku::print() const
+{
+    // 打印横线
+    auto printRowLine = [this](){
+        cout << "+";
+        for (int i = 0; i < _grid_size; i += _box_size)
+            cout << "-----+";
+        cout << endl;
+    };
+
+    // Table top border
+    printRowLine();
+
+    // Table numbers
+    for (int r = 0; r < _grid_size; ++r)
+    {
+        cout << "|";
+        for (int c = 0; c < _grid_size; c += _box_size)
+        {
+            cout << _data[r][c] << " " 
+                << _data[r][c + 1] << " "
+                << _data[r][c + 2] << "|";
+        }
+        cout << endl;
+
+        // Box border
+        if (!((r + 1) % _box_size))
+            printRowLine();
+    }
+}
+
+std::string Sudoku::serialization() const
+{
+    std::string result(_grid_size * _grid_size, '0');
+    
+    for (int r = 0; r < _grid_size; ++r)
+    {
+        for (int c = 0; c < _grid_size; ++c)
+        {
+            result[r * _grid_size + c] = _data[r][c] + '0';
+        }
+    }
+
+    return result;
 }

@@ -11,10 +11,18 @@ public:
 
     // 解析输入字符串
     bool parse(std::string_view str);
+
     // cell提示值
     std::vector<int> getInference(int row, int column) const;
+
     // 是否合法数独
     bool isAValidSudoku() const;
+
+    // 打印至terminal
+    void print() const;
+
+    // 序列化
+    std::string serialization() const;
 };
 
 #endif //_SUDOKU_H_

@@ -3,7 +3,7 @@
 
 #include <QAbstractTableModel>
 #include <QtQml/qqml.h>
-#include "sudoku/sudoku.h"
+#include "sudoku.h"
 
 // 网格表格数据
 class SudokuTableModel : public QAbstractTableModel
