@@ -4,6 +4,7 @@ from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtQuickControls2 import QQuickStyle
 
 from ui.sudokuTableModel import SudokuTableModel
+import ui.rc_resources
 
 if __name__ == "__main__":
 
@@ -14,7 +15,7 @@ if __name__ == "__main__":
 
     sudoku_table_model = SudokuTableModel()
     engine.rootContext().setContextProperty("sudoku_table_model", sudoku_table_model)
-    engine.load("qml/main.qml")
+    engine.load("qrc:main.qml")
     if len(engine.rootObjects()) == 0:
         sys.exit(-1)
 
