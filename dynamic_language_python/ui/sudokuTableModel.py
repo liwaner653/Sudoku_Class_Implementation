@@ -68,9 +68,10 @@ class SudokuTableModel(QAbstractTableModel):
     def setShowHint(self, show_hint: bool):
         self.__show_hint = show_hint
 
-        # 显示反馈信息
+        # Update feedback message
         self.__message = "Hints have been showed" if self.__show_hint else "Hints have been hidden"
 
+        # Refresh UI table values
         self.beginResetModel()
         self.endResetModel()
 
